@@ -13,25 +13,25 @@ While you're at it, lets also make use of Rails I18n for the label text.
 ## Guidelines
 
 - [x] Your solution must use Rails I18n for the label text
-- [ ] Use Git and commit as often as you think is necessary to properly tell your story
+- [x] Use Git and commit as often as you think is necessary to properly tell your story
 - [x] Write tests using RSpec proving that your solution works (TDD strongly encouraged)
 * Use whatever tools you'd like (gems, patterns, etc)
 * Engineer your solution as if there's a high chance it will be re-used in other widgets
 * Feel free to create new directories, classes, modules, etc...
-- [ ] Keep lines wrapped at 120 characters
+- [x] Keep lines wrapped at 120 characters
 * Enjoy this odd challenge!
 
 ## What we're looking for
 
-- [ ] Coding style (tidyness & legibility)
-- [ ] Abstractions
+- [x] Coding style (tidyness & legibility)
+* Abstractions
 - [x] Testing practices
 - [x] Security awareness
-- [ ] Commit journey
+- [x] Commit journey
 
 ## How to submit
 
-- [ ] Submit your results
+- [x] Submit your results
 
 2 options:
 
