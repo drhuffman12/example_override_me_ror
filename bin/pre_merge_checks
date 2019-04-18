@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+bundle install
+
+rm -rf qa/style_etc
+rm -rf qa/coverage
+rm -rf qa/tests
+
+mkdir -p qa/style_etc
+mkdir -p qa/coverage
+mkdir -p qa/tests
+
+# HTML format for Developer-friendly-ness
+RUBYOPT=--enable=frozen-string-literal bundle exec rubocop --format html -o qa/style_etc/index.html
+RUBYOPT=--enable=frozen-string-literal bundle exec rspec --format html --out qa/tests/index.html
+
+# .. If your CI/CD system likes JSON format, you could also use that ...

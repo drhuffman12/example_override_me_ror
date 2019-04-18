@@ -1,0 +1,21 @@
+require: rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.6
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+# NOTE: instead of putting `# frozen_string_literal: false` at the top of a gazillion ruby files, set your `RUBYOPT`
+#   e.g.: `RUBYOPT=--enable=frozen-string-literal bundle exec ...`
+Style/MutableConstant:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# NOTE: for sake of this example repo, I won't require back-filling doc comments for given classes
+Style/Documentation:
+  Enabled: false
