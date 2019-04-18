@@ -10,7 +10,7 @@ mkdir -p qa/coverage
 mkdir -p qa/tests
 
 # HTML format for Developer-friendly-ness
-bundle exec rubocop --format html -o qa/style_etc/index.html
-bundle exec rspec --format html --out qa/tests/index.html
+RUBYOPT=--enable=frozen-string-literal bundle exec rubocop --format html -o qa/style_etc/index.html
+RUBYOPT=--enable=frozen-string-literal bundle exec rspec --format html --out qa/tests/index.html
 
 # .. If your CI/CD system likes JSON format, you could also use that ...
