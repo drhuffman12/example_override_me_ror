@@ -39,13 +39,4 @@
 
 Finally email us with your link or zip file.
 
-<h2><%= t('welcome.index.cronuts_acceptance_widget.header') %></h2>
-<div class="challenge_box">
-  <%= label_tag 'terms_checkbox' do %>
-    <%= t('welcome.index.cronuts_acceptance_widget.prefix') %>
-    <%= link_to t('welcome.index.cronuts_acceptance_widget.cronuts_label'), @cronuts_url %>
-    <%= t('welcome.index.cronuts_acceptance_widget.midfix') %>
-    <%= link_to t('welcome.index.cronuts_acceptance_widget.donuts_label'), @donuts_url %>
-  <% end %>
-  <%= check_box_tag 'terms_checkbox' %>
-</div>
+<%= render 'shared/cronuts_acceptance_widget' %>
