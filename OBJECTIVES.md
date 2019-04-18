@@ -12,7 +12,7 @@ While you're at it, lets also make use of Rails I18n for the label text.
 
 ## Guidelines
 
-- [ ] Your solution must use Rails I18n for the label text
+- [x] Your solution must use Rails I18n for the label text
 - [ ] Use Git and commit as often as you think is necessary to properly tell your story
 - [x] Write tests using RSpec proving that your solution works (TDD strongly encouraged)
 * Use whatever tools you'd like (gems, patterns, etc)

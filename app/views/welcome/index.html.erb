@@ -39,13 +39,13 @@
 
 Finally email us with your link or zip file.
 
-<h2>Cronut acceptance widget</h2>
+<h2><%= t('welcome.index.cronuts_acceptance_widget.header') %></h2>
 <div class="challenge_box">
   <%= label_tag 'terms_checkbox' do %>
-    By selecting this checkbox, you agree that
-    <%= link_to "cronuts", @cronuts_url %>
-    are better than
-    <%= link_to "donuts", @donuts_url %>
+    <%= t('welcome.index.cronuts_acceptance_widget.prefix') %>
+    <%= link_to t('welcome.index.cronuts_acceptance_widget.cronuts_label'), @cronuts_url %>
+    <%= t('welcome.index.cronuts_acceptance_widget.midfix') %>
+    <%= link_to t('welcome.index.cronuts_acceptance_widget.donuts_label'), @donuts_url %>
   <% end %>
   <%= check_box_tag 'terms_checkbox' %>
 </div>
