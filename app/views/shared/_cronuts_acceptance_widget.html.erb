@@ -1,8 +1,8 @@
 <%
 tag_id = 'terms_checkbox'
 js_update_cookie = "document.cookie = ('" + tag_id + "=' + (this.checked ? 'true' : 'false'));"
-js_notify_user_message = "'This checkbox was ' + (this.checked ? 'checked' : 'un-checked')" 
-js_notify_user = "alert('This checkbox was ' + (this.checked ? 'checked' : 'un-checked') + '; cookie *" + tag_id + "* updated.');"
+js_notify_user_message = "'The *" + tag_id + "* checkbox was ' + (this.checked ? '*checked*' : '*un-checked*')"
+js_notify_user = "alert(" + js_notify_user_message + "+ '; associated cookie updated.');"
 on_click_action = (js_update_cookie + js_notify_user)
 %>
 <%= render 'shared/acceptance_widget', 
