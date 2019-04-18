@@ -1,0 +1,18 @@
+<%
+tag_id = 'terms_checkbox'
+js_update_cookie = "document.cookie = ('" + tag_id + "=' + (this.checked ? 'true' : 'false'));"
+js_notify_user_message = "'The *" + tag_id + "* checkbox was ' + (this.checked ? '*checked*' : '*un-checked*')"
+js_notify_user = "alert(" + js_notify_user_message + "+ '; associated cookie updated.');"
+on_click_action = (js_update_cookie + js_notify_user)
+%>
+<%= render 'shared/acceptance_widget', 
+      header: t('welcome.index.cronuts_acceptance_widget.header'),
+      tag_id: tag_id,
+      is_checked: ((cookies[tag_id] ||= 'false') != 'false'),
+      on_click_action: (js_update_cookie + js_notify_user) do |aw|      
+%>
+  <%= t('welcome.index.cronuts_acceptance_widget.prefix') %>
+  <%= link_to t('welcome.index.cronuts_acceptance_widget.cronuts_label'), @cronuts_url %>
+  <%= t('welcome.index.cronuts_acceptance_widget.midfix') %>
+  <%= link_to t('welcome.index.cronuts_acceptance_widget.donuts_label'), @donuts_url %>
+<% end %>

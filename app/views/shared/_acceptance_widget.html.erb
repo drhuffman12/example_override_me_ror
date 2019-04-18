@@ -1,0 +1,9 @@
+<%# params: header, tag_id, label_content, is_checked, on_click_action %>
+
+<h2><%= header %></h2>
+<div class="challenge_box">
+  <%= label_tag tag_id do %>
+    <%= yield %>
+  <% end %>
+  <%= check_box_tag tag_id, 'accepted', is_checked, { onclick: on_click_action } %>
+</div>
